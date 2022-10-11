@@ -1,11 +1,8 @@
 #!/bin/usr/python3
 """Empty Square class"""
 
-
 class Square:
-    """Defining a square"""
-    pass
-
+    """Square Definition"""
     def __init__(self, size):
         """
         init method
