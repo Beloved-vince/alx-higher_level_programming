@@ -6,6 +6,7 @@
 
 
 class Rectangle:
+    pass
     def __init__(self, __width=0, __height=0):
         self.width = __width
         self.height = __height
