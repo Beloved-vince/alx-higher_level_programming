@@ -35,7 +35,7 @@ class Rectangle:
     @property
     def height(self):
         """
-        Getter: get the private attr hieght
+        get the private attr hieght
         """
         return self.height
 
@@ -48,3 +48,4 @@ class Rectangle:
             raise TypeError("height must be integer")
         if value < 0:
             raise TypeError("height must be >= 0")
+        self.__height = value
