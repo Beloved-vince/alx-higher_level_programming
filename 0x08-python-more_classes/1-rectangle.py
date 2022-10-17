@@ -18,6 +18,7 @@ class Rectangle:
     def width(self):
         """
         Return the private __width as public
+        Args: class attr
         """
         return self.__width
 
@@ -25,6 +26,7 @@ class Rectangle:
     def width(self, value):
         """
         Setter: set private width to value
+        Args: class attr and return value
         """
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
@@ -36,6 +38,7 @@ class Rectangle:
     def height(self):
         """
         get the private attr hieght
+        Args: class attr
         """
         return self.height
 
@@ -43,6 +46,7 @@ class Rectangle:
     def height(self, value):
         """
         Setter: Check for Error and return height to be value
+        Args: check value
         """
         if not isinstance(value, int):
             raise TypeError("height must be integer")
