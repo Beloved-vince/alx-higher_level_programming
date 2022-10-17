@@ -1,73 +1,88 @@
-#!/usr/bin/pytho3
-"""
-Module 3-rectangle
-Contains class Rectangle with private attribute width and height,
-public area and perimeter methods, and allows printing #'s
+#!/usr/bin/python3
+"""A module for working with rectangles.
 """
 
 
 class Rectangle:
-    """
-    Defines class rectangle with private attribute width and height
-    Args:
-        width (int): width
-        height (int): height
-    Functions:
-        __init__(self, width, height)
-        width(self)
-        width(self, value)
-        height(self)
-        height(self, value)
-        area(self)
-        perimeter(self)
-        __str__(self)
+    """Represents a 2D Polygon with 4 perpendicular sides.
     """
     def __init__(self, width=0, height=0):
-        """ Initialize rectangles """
+        """Initializes a Rectangle with a given width and height.
+        Args:
+            width (int): The width of the rectangle.
+            height (int): The height of the rectangle.
+        """
         self.width = width
         self.height = height
 
     @property
     def width(self):
-        """ Getter returns width """
+        """Retrieves the width of this Rectangle.
+        Returns:
+            int: The width of this Rectangle.
+        """
         return self.__width
-
-    @width.setter
-    def width(self, value):
-        """ Setter sets width if int > 0 """
-        if not isinstance(value, int):
-            raise TypeError("width must be an integer")
-        if value < 0:
-            raise ValueError("width must be >= 0")
-        self.__width = value
 
     @property
     def height(self):
-        """ Getter returns height """
+        """Retrieves the height of this Rectangle.
+        Returns:
+            int: The height of this Rectangle.
+        """
         return self.__height
+
+    @width.setter
+    def width(self, value):
+        """Updates the width of this Rectangle.
+        Args:
+            value (int): The new width of this Rectangle.
+        """
+        if not isinstance(value, int):
+            raise TypeError('width must be an integer')
+        elif value < 0:
+            raise ValueError('width must be >= 0')
+        else:
+            self.__width = value
 
     @height.setter
     def height(self, value):
-        """ Setter sets height if int > 0 """
+        """Updates the height of this Rectangle.
+        Args:
+            value (int): The new height of this Rectangle.
+        """
         if not isinstance(value, int):
-            raise TypeError("height must be an integer")
-        if value < 0:
-            raise ValueError("height must be >= 0")
-        self.__height = value
+            raise TypeError('height must be an integer')
+        elif value < 0:
+            raise ValueError('height must be >= 0')
+        else:
+            self.__height = value
 
     def area(self):
-        """ Return width * height """
-        return self.__width * self.__height
+        '''Computes the area of this Rectangle.
+        Returns:
+            int: The area of this Rectangle.
+        '''
+        return self.width * self.height
 
     def perimeter(self):
-        """ Return 2*width + 2*height (or return 0 if width or height is 0)"""
-        if self.__width == 0 or self.__height == 0:
+        '''Computes the perimeter of this Rectangle.
+        Returns:
+            int: The perimeter of this Rectangle.
+        '''
+        if self.width == 0 or self.height == 0:
             return 0
-        return (2 * self.__width) + (2 * self.height)
+        else:
+            return 2 * (self.width + self.height)
 
     def __str__(self):
-        """ Prints rectangle with #'s """
-        if self.__width == 0 or self.__height == 0:
-            return ""
-        pic = "\n".join(["#" * self.__width for rows in range(self.__height)])
-        return pic
+        '''Returns a string representation of this Rectangle.
+        Returns:
+            str: A string representation of this Rectangle.
+        '''
+        if self.width == 0 or self.height == 0:
+            return ''
+        else:
+            res = list(map(
+                lambda x: '#' * self.width + '\n' * (x != self.height - 1),
+                range(self.height)))
+            return ''.join(res)
