@@ -6,7 +6,10 @@
 
 
 class Rectangle:
-    pass
+    """
+    Args: width and height
+    func: width, height
+    """
     def __init__(self, __width=0, __height=0):
         self.width = __width
         self.height = __height
