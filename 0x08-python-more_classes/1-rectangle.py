@@ -1,86 +1,53 @@
-#/usr/bin/python3
+#!/usr/bin/python3
 """
-Module 1-rectange
-Contains class Rectangle
-with private attribute width and height
+Module class of rectangle
+with private attribute
 """
 
 
 class Rectangle:
     """
-    Defines class Rectangle with private attributes width and height
+    Private class attributes width and height
     Args:
-        width (int): width
-        height (int): height
-    Functions:
-        __init__(self, width, height)
-        width(self)
-        width(self, value)
-        height(self)
-        height(self, value)
+        width(int): width
+        height(int): height
+    Functions: width and height(setter)
+            width and height(getter)
     """
-    def __init__(self, width=0, height=0):
-        """ Initializes rectangles """
-        self.width = width
-        self.height = height
+
+    def __init__(self, __width=0, __height=0):
+        """Initializing"""
+        self.width = __width
+        self.height = __height
 
     @property
     def width(self):
-<<<<<<< HEAD
-        """ Getter: returns width """
-=======
-        """
-        Return the private __width as public
-        Args: class attr
-        """
->>>>>>> c3b680bb27e43996d6285b9b61e9fa42fc6735a4
+        """getter: return width(int)"""
         return self.__width
 
     @width.setter
     def width(self, value):
-<<<<<<< HEAD
-        """ Setter: Sets width to new value """
-=======
-        """
-        Setter: set private width to value
-        Args: class attr and return value
-        """
->>>>>>> c3b680bb27e43996d6285b9b61e9fa42fc6735a4
+        """return: value of type int"""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
-            raise ValueError("width must be >= 0")
-        self.__width = value
+            raise TypeError("width must be >= 0")
+        else:
+            self.__width = value
+            return self.__width
 
     @property
     def height(self):
-<<<<<<< HEAD
-        """ Getter: returns height"""
+        """Getter: return height value of type int"""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """ Setter: Sets height to new value"""
-=======
-        """
-        get the private attr hieght
-        Args: class attr
-        """
-        return self.height
-
-    @height.setter
-    def height(self, value):
-        """
-        Setter: Check for Error and return height to be value
-        Args: check value
-        """
->>>>>>> c3b680bb27e43996d6285b9b61e9fa42fc6735a4
+        """Returns value of type int"""
         if not isinstance(value, int):
-            raise TypeError("height must be an integer")
+            raise TypeError("width must be an integer")
         if value < 0:
-<<<<<<< HEAD
-            raise ValueError("height must be >= 0")
-=======
-            raise TypeError("height must be >= 0")
->>>>>>> c3b680bb27e43996d6285b9b61e9fa42fc6735a4
-        self.__height = value
+            raise TypeError("width must be >= 0")
+        else:
+            self.__height = value
+            return self.__height
