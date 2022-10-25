@@ -7,6 +7,10 @@
 
 
 def append_write(filename='', text=''):
-    """appending to the end of file"""
+    """appending to the end of file
+        Args:
+            filename: file
+            text: appended to filename
+    """
     with open(filename, 'a', encoding='utf-8') as f:
         return f.write(text)
