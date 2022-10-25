@@ -9,6 +9,8 @@ import json
 
 def to_json_string(obj):
     """Json format
-        Args: json return json string format
+        Args: 
+            obj: json return json string format
+            json: string rep format
     """
     return json.dumps(obj)
