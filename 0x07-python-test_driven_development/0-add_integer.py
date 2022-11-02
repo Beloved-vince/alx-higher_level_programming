@@ -1,9 +1,9 @@
-#/usr/bin/python3
+#!/usr/bin/python3
+
 """
     A function that add two integer and return the sum
     Also check the value if they are ValueError free
     Also accept two values of types int or float and cast them into int
-
 """
 
 
