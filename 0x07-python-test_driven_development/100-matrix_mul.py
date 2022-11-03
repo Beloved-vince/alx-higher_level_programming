@@ -17,7 +17,10 @@ def matrix_mul(m_a, m_b):
     if len(m_a) == 0 or len(m_b) == 0 or m_a == [[]] or m_b == [[]]:
         raise ValueError("{} can't be empty".format
                          ("m_a" if len(m_a) == 0 else "m_b"))
-
+    if type(m_a[0:]) is not list:
+        raise TypeError('m_a must be a list of lists')
+    if type(m_b[0:]) is not list:
+        raise TypeError('m_b must be a list of lists')
     for eachrow in m_a:
         for n in eachrow:
             if not isinstance(n, (int, float)):
