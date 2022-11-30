@@ -3,4 +3,6 @@
 -- The user_0d_2 password should be set to user_0d_2_pwd
 -- If the database hbtn_0d_2 already exists, your script should not fail
 -- If the user user_0d_2 already exists, your script should not fail
-CREATE 
+
+CREATE IF EXISTS DATABASE hbtn_0d_2;
+CREATE IF
