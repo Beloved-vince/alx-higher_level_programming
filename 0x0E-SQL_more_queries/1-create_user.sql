@@ -3,4 +3,4 @@
 -- The user_0d_1 password should be set to user_0d_1_pwd
 -- If the user user_0d_1 already exists, your script should not fail
 
-IF EXISTS CREATE USER 'user_0d_1'@'localhost' IDENTIFIED BY 'user_od_1_pwd';
+CREATE IF EXISTS USER 'user_0d_1'@'localhost' IDENTIFIED BY 'user_od_1_pwd';
