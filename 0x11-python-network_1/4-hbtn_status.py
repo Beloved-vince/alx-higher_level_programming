@@ -1,9 +1,5 @@
 #!/usr/bin/python3
-"""
-Fetches https://intranet.hbtn.io/status
-use the package urllib
-body of the response must be displayed in tabulation before -
-"""
+"""Fetches https://alx-intranet.hbtn.io/status"""
 if __name__ == "__main__":
     import requests
     req = requests.get('https://alx-intranet.hbtn.io/status')
