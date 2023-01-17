@@ -4,9 +4,10 @@ Fetches https://intranet.hbtn.io/status
 use the package urllib
 body of the response must be displayed in tabulation before -
 """
-import requests
-
-r = requests.get('https://alx-intranet.hbtn.io/status')
-resp = r.text
-print('Body response:\n\t- type: {}'.format(type(resp)))
-print('\t- content: {}'.format(resp))
+if __name__ == "__main__":
+    import requests
+    req = requests.get('https://alx-intranet.hbtn.io/status')
+    response = req.text
+    print("Body response:")
+    print("\t- type: {}".format(type(response)))
+    print("\t- content: {}".format(response))
