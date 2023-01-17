@@ -7,4 +7,4 @@ if __name__ == '__main__':
     import requests
     from sys import argv
     r = requests.post(argv[1], data={"key": argv[2]})
-    print("Your email is".format(r.headers.get(argv[2])))
+    print(r.text)
