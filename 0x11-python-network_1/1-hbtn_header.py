@@ -1,13 +1,11 @@
 #!/usr/bin/python3
 """
-given URL as parameter, fetch URL and display value from reponse header
-usage: ./1-hbtn_header https://intranet.hbtn.io
+takes in a URL, sends a request to the URL and displays the value of the
+X-Request-Id variable found in the header of the response
 """
-from sys import argv
-import urllib.request
-
-
 if __name__ == "__main__":
-    req = urllib.request.Request(argv[1])
-    with urllib.request.urlopen(req) as response:
-        print(response.getheader('X-Request-Id'))
+    import urllib.request as request
+    from sys import argv
+    req = request.Request(argv[1])
+    with request.urlopen(req) as r:
+        print(r.headers.get('X-Request-Id'))
