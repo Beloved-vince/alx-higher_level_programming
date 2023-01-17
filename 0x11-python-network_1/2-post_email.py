@@ -1,11 +1,12 @@
 #!/usr/bin/python3
 """
-Python script that takes in a URL and an email, sends a POST
+given URL & email as params, send POST req to URL, display response body utf-8
+usage: ./2-post_email.py http://0.0.0.0:5000/post_email hr@holbertonschool.com
 """
-
 from sys import argv
 import urllib.parse
 import urllib.request
+
 
 if __name__ == "__main__":
     url = argv[1]
