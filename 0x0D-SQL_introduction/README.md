@@ -1,1 +1,0 @@
-# Scripted structure query language
